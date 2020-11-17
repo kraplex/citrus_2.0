@@ -1,0 +1,486 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body,html {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .flex-row {
+    display: flex;
+  }
+  
+  .flex-column {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .space-between {
+    justify-content: space-between;
+  }
+  
+  .wrapper {
+    max-width: 1366px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-image: url("./images/1bg.png"), url("./images/bottom_bg.png"); */
+    background-position: 0 59%, bottom;
+    background-repeat: no-repeat;
+    padding-bottom: 96px;
+  }
+  
+  .main_img {
+    display: inline-block;
+    margin-bottom: 35px;
+    max-width: 1366px;
+    width: 100%;
+  }
+  
+  .features {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .row-top {
+    margin-bottom: 114px;
+    padding: 0 215px;
+  }
+  
+  .row-bottom {
+    margin-bottom: 180px;
+  }
+  
+  .pixel-perfect /* этот класс и свойства для pixel-perfect*/  {
+    padding-left: 228px;
+    padding-right: 200px;
+  }
+  
+  .pixel-perfect .features-wrapper:first-child {
+    margin-right: 70px;
+  }
+  
+  .pixel-perfect .features-wrapper:nth-child(2) {
+    margin-right: 50px;
+  }
+  
+  .features__title {
+    font-family: Roboto,sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.54);
+    margin-bottom: 12px;
+  }
+  
+  .row-bottom .features__title {
+    margin-bottom: 75px;
+    padding-right: 10px;
+  }
+  
+  .features-wrapper {
+    position: relative;
+    align-items: center;
+  }
+  
+  .features__img {
+    margin-bottom: 18px;
+    z-index: 2;
+  }
+  
+  .row-bottom .features__img {
+    margin-bottom: 46px;
+  }
+  
+  .sky-scale {
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .yt {
+    left: 7%;
+    bottom: 49%;
+  }
+  
+  .acad {
+    left: 20%;
+    bottom: 49%;
+  }
+  
+  .hub {
+    left: 18%;
+    bottom: 49%;
+  }
+  
+  .features-wrapper:hover .sky-scale{
+    transform: scale(1.2);
+    transition-duration: 1s;
+  }
+  
+  .features__link {
+    font-family: Roboto,sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #3B6D9A;
+    text-decoration: none;
+  }
+  
+  .features-wrapper:hover .features__link {
+    color: #FF680A;
+  }
+  
+  .form {
+    align-items: center;
+  }
+  
+  .bonus {
+    color: #FF680A;
+  }
+  
+  .label {
+    margin-bottom: 56px;
+  }
+  
+  .label_text {
+    font-family: Roboto,sans-serif;
+    font-style: normal;
+    text-align: center;
+    line-height: 130%;
+    color: rgba(0, 0, 0, 0.87);
+    font-weight: 600;
+  }
+  
+  .label_text1 {
+    font-size: 62px;
+  }
+  
+  .label_text2 {
+    font-size: 32px;
+  }
+  
+  .form input {
+    border-radius: 50px;
+    max-width: 369px;
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid #CFCFCF;
+    padding: 13px 0;
+    margin-bottom: 43px;
+    font-family: Roboto,sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.54);
+  }
+  
+  .form button, .thanks button {
+    background: #FF680A;
+    border: none;
+    border-radius: 50px;
+    max-width: 369px;
+    width: 100%;
+    font-family: Roboto,sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.87);
+    padding: 14px 0;
+  }
+  
+  .thanks {
+      display: none;
+  }
+
+
+  @media screen and (max-width: 1024px) {
+  
+    .wrapper {
+      max-width: 1024px;
+      background-size: 976px 515px;
+    }
+  
+    .main_img {
+      max-width: 976px;
+      width: 100%;
+      margin-bottom: 25px;
+    }
+  
+    .features__title {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+  
+    .row-top {
+      margin-bottom: 95px;
+      padding: 0 115px;
+    }
+  
+    .row-top .features__img {
+      width: 160px;
+      margin-bottom: 13px;
+    }
+  
+    .features__link {
+      font-size: 16px;
+    }
+  
+    .row-bottom .features__title {
+      margin-bottom: 65px;
+    }
+  
+    .pixel-perfect /* этот класс и свойства для pixel-perfect*/  {
+      padding-left: 120px;
+      padding-right: 100px;
+    }
+  
+    .row-bottom .features__img-yt {
+      width: 137px;
+    }
+  
+    .row-bottom .features__img-acad {
+      width: 150px;
+    }
+  
+    .row-bottom .features__img-hub {
+      width: 91px;
+    }
+  
+    .sky-scale {
+      width: 121px;
+    }
+  
+    .features__img {
+      margin-bottom: 0;
+    }
+  
+    .row-bottom .features__img {
+      margin-bottom: 35px;
+    }
+  
+    .features__link {
+      font-size: 16px;
+    }
+  
+    .row-bottom {
+      margin-bottom: 150px;
+    }
+  
+    .label_text1 {
+      font-size: 44px;
+    }
+  
+    .label_text2 {
+      font-size: 22px;
+    }
+  
+    .label {
+      margin-bottom: 45px;
+    }
+  
+    .form input {
+      margin-bottom: 30px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+  
+    .wrapper {
+      max-width: 768px;
+      background-size: 720px 388px;
+    }
+  
+    .main_img {
+      max-width: 720px;
+      width: 100%;
+      margin-bottom: 25px;
+    }
+  
+    .features__title {
+      margin-bottom: 8px;
+    }
+  
+    .row-top {
+      margin-bottom: 77px;
+      padding: 0 70px;
+    }
+  
+    .row-top .features__img {
+      margin-bottom: 13px;
+    }
+  
+    .features__link, .features__link  {
+      color: #000000;
+      font-size: 14px;
+      line-height: 16px;
+    }
+  
+    .row-bottom .features__title {
+      margin-bottom: 51px;
+    }
+  
+    .pixel-perfect /* этот класс и свойства для pixel-perfect*/ {
+      padding-left: 77px;
+      padding-right: 66px;
+    }
+  
+    .row-bottom .features__img {
+      margin-bottom: 40px;
+    }
+  
+    .row-bottom {
+      margin-bottom: 110px;
+    }
+  
+    .label_text1 {
+      font-size: 32px;
+    }
+  
+    .label_text2 {
+      font-size: 16px;
+    }
+  
+    .label {
+      margin-bottom: 36px;
+    }
+  
+    .form input {
+      max-width: 256px;
+      font-size: 18px;
+      line-height: 21px;
+      padding: 12px 0;
+      margin-bottom: 23px;
+    }
+  
+    .form button {
+      max-width: 256px;
+      font-size: 18px;
+      line-height: 21px;
+      padding: 13px 0;
+    }
+  }
+  
+  @media screen and (max-width: 320px) {
+  
+    .wrapper {
+      max-width: 320px;
+ /*      background-image: url("./images/bg-320.png"); */
+      background-position: bottom;
+    }
+  
+    .main_img {
+      max-width: 320px;
+      width: 100%;
+      margin-bottom: 25px;
+    }
+  
+    .features {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .features .flex-row {
+      flex-direction: column;
+     }
+  
+    .row-top .features__title {
+      margin-bottom: 43px;
+    }
+  
+    .row-top {
+      margin-bottom: 93px;
+      padding: 0;
+    }
+  
+    .row-top .features-wrapper:first-child {
+      margin-bottom: 41px;
+      margin-right: 0;
+    }
+  
+    .row-top .features-wrapper:nth-child(2) {
+      margin-bottom: 39px;
+      margin-right: 0;
+    }
+  
+    .pixel-perfect /* этот класс и свойства для pixel-perfect*/  {
+      padding: 0;
+      margin: 0;
+    }
+  
+    .pixel-perfect .features-wrapper:first-child {
+      margin-right: 0;
+    }
+  
+    .pixel-perfect .features-wrapper:nth-child(2) {
+      margin-right: 0;
+    }
+  
+    .row-bottom {
+      margin-bottom: 25px;
+    }
+  
+    .row-bottom .features__title {
+      margin-bottom: 80px;
+      max-width: 269px;
+      padding: 0;
+    }
+  
+   .features__img {
+      margin-bottom: 18px;
+    }
+  
+    .row-bottom .features__img {
+      margin-bottom: 39px;
+    }
+  
+    .row-bottom .features-wrapper {
+      margin-bottom: 80px;
+    }
+  
+    .yt {
+      left: 15%;
+    }
+  
+    .acad {
+      left: 18%;
+    }
+  
+    .label {
+      margin-bottom: 31px;
+    }
+  
+    .label_text1 {
+      font-size: 24px;
+      margin-bottom: 9px;
+     }
+  
+    .label_text2 {
+      font-size: 14px;
+    }
+  
+    .form input {
+      padding: 8px 0;
+      margin-bottom: 25px;
+      font-size: 16px;
+      line-height: 19px;
+    }
+  
+    .form button {
+      font-size: 16px;
+      line-height: 19px;
+      padding: 8px 0;
+    }
+  }
