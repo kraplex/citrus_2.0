@@ -1,4 +1,4 @@
-import "./style.css";
+import "./style.scss";
 import bg from "./images/1bg.png";
 import bg320 from "./images/bg-320.png";
 import bottom_bg from "./images/bottom_bg.png";
@@ -15,32 +15,52 @@ const url = "https://postman-echo.com/post";
 const input = document.querySelector(".form input");
 const buttonSend = document.querySelector(".form button");
 
+const form = document.querySelector(".form");
 const divForm = document.querySelector(".form");
 const divThanks = document.querySelector(".thanks");
 const buttonBack = document.querySelector(".back");
 
-buttonSend.addEventListener("click", async () => {
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+});
 
-    try {
-        let responce = await fetch(url, {
-            method: "POST",
-            mode: 'no-cors',
-            headers: {
-                'Content-Type': 'application/json;charset=utf-8'
-            },
-            body: JSON.stringify({
-                phoneNumber: input.value
-            })
-        });
-        input.value = "";
-        divForm.style.display = "none";
-        divThanks.style.display = "block";
-    } catch {
-        console.error("function did not work")
-    }
-})
+form.addEventListener("keydown", (event) => {
+  if (event.keyCode === 13) {
+    if (input.value.length === 2 && Number.isNaN(+input.value) === false) {
+      eventHandler();
+    } else alert("invalid phone format");
+  }
+});
 
-buttonBack.addEventListener("click", ()=>{
-    divThanks.style.display = "none";
-    divForm.style.display = "flex";
-})
+buttonSend.addEventListener("click", () => {
+  if (input.value.length === 2 && Number.isNaN(+input.value) === false) {
+    eventHandler();
+  } else alert("invalid phone format");
+});
+
+async function eventHandler() {
+  try {
+    let responce = await fetch(url, {
+      method: "POST",
+      mode: "no-cors",
+      headers: {
+        "Content-Type": "application/json;charset=utf-8",
+      },
+      body: JSON.stringify({
+        phoneNumber: input.value,
+      }),
+    });
+    input.value = "";
+    divForm.style.display = "none";
+    divThanks.style.display = "block";
+  } catch {
+    console.error("Something went wrong");
+  }
+}
+
+buttonBack.addEventListener("click", () => {
+  divThanks.style.display = "none";
+  divForm.style.display = "flex";
+  divForm.scrollIntoView({ block: "center", behavior: "smooth" });
+});
+

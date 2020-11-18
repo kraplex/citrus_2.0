@@ -1,65 +1,78 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Открытие Мега Цитруса</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
+
 <body>
     <div class="wrapper">
-        <img src="/src/images/main_img.jpg" alt="Открытие Мега Цитруса в Днепре" class="main_img">
-        <div class="features row-top">
-                <h2 class="features__title">Тебя будет ждать</h2>
-                <div class="flex-row space-between">
-                    <div class="features-wrapper flex-column">
-                        <img src="/src/images/im_sale.png" alt="Скидки" class="features__img">
-                        <a href="#" class="features__link">500 бонусов и<br>скидки до 30%!</a>
+        <img src="/src/images/main_img.jpg" alt="Открытие Мега Цитруса в Днепре" class="main_img" />
+        <main class="features">
+            <div class="features_block features_block_top ">
+                <h2 class="features_block_title">Тебя будет ждать</h2>
+                <div class="features_links_wrapper">
+                    <div class="features_link">
+                        <img src="/src/images/im_sale.png" alt="Скидки" />
+                        <a href="#" class="link">500 бонусов и<br />скидки до 30%!</a>
                     </div>
-                    <div class="features-wrapper flex-column">
-                        <img src="/src/images/im_event.png" alt="События" class="features__img">
-                        <a href="#" class="features__link">Расписание<br>всех мероприятий!</a>
+                    <div class="features_link">
+                        <img src="/src/images/im_event.png" alt="События" />
+                        <a href="#" class="link">Расписание<br />всех мероприятий!</a>
                     </div>
-                    <div class="features-wrapper flex-column">
-                        <img src="/src/images/im_gift.png" alt="Подарки" class="features__img">
-                        <a href="#" class="features__link">Еженедельные<br>сюрпризы</a>
+                    <div class="features_link">
+                        <img src="/src/images/im_gift.png" alt="Подарки" />
+                        <a href="#" class="link">Еженедельные<br />сюрпризы</a>
                     </div>
-                </div>
-        </div>
-        <div class="features row-bottom">
-            <h2 class="features__title">Тебя так же ждут новые крутые зоны</h2>
-            <div class="flex-row space-between pixel-perfect">
-                <div class="features-wrapper flex-column">
-                    <img src="/src/images/yt.png" alt="YouTube" class="features__img features__img-yt">
-                    <img src="/src/images/sky.png" alt="Облако" class="sky-scale yt">
-                    <a href="#" class="features__link">Профессиональная<br>You Tube студия!</a>
-                </div>
-                <div class="features-wrapper flex-column">
-                    <img src="/src/images/logo_academy_new.png" alt="Цитрус академия" class="features__img features__img-acad">
-                    <img src="/src/images/sky.png" alt="Облако" class="sky-scale acad">
-                    <a href="#" class="features__link">Место встречи с будущим -<br>Цитрус Академия.</a>
-                </div>
-                <div class="features-wrapper flex-column">
-                    <img src="/src/images/logo_cehab_new.png" alt="Цитрус Хаб" class="features__img features__img-hub">
-                    <img src="/src/images/sky.png" alt="Облако" class="sky-scale hub">
-                    <a href="#" class="features__link">Полноценное обучающее<br>пространство ЦеХАБ</a>
                 </div>
             </div>
-        </div>
-        <form class="form flex-column">
-            <label class="label">
-                <p class="label_text label_text1">Получи <span class="bonus">500 бонусов</span></p>
-                <p class="label_text label_text2">на покупки в нашем новом магазине<br>&#8220;Цитрус&#8221; в Днепре!</p>
+            <div class="features_block features_block_bottom" >
+                <h2 class="features_block_title">Тебя так же ждут новые крутые зоны</h2>
+                <div class="features_links_wrapper">
+                    <div class="features_link">
+                        <img src="/src/images/yt.png" alt="YouTube" class="logo" />
+                        <img src="/src/images/sky.png" alt="Облако" class="" />
+                        <a href="#" class="link">Профессиональная<br />You Tube студия!</a>
+                    </div>
+                    <div class="features_link">
+                        <img src="/src/images/logo_academy_new.png" alt="Цитрус академия" class="logo" />
+                        <img src="/src/images/sky.png" alt="Облако" class="" />
+                        <a href="#" class="link">Место встречи с будущим -<br />Цитрус Академия.</a>
+                    </div>
+                    <div class="features_link">
+                        <img src="/src/images/logo_cehab_new.png" alt="Цитрус Хаб" class="logo" />
+                        <img src="/src/images/sky.png" alt="Облако" class="" />
+                        <a href="#" class="link">Полноценное обучающее<br />пространство ЦеХАБ</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+       <!--  <form class="">
+            <label class="">
+                <p class=""> Получи <span class="">500 бонусов</span>
+                </p>
+                <p class="">на покупки в нашем новом магазине<br />&#8220;Цитрус&#8221; в Днепре!
+                </p>
             </label>
-            <input type="tel" placeholder="+38 (0__) __ - __ - __"  required>
+            <input type="tel" placeholder="+38 (0__) __ - __ - __" required />
             <button type="button">Отримати</button>
         </form>
-        <div class="thanks">
-            <p>Отлично!</p>
-            <p>bla bla bla</p>
-            <button type="button" class="back">Назад</button>
-        </div>
+        <div class="" style="display: none">
+            <p class="">Отлично!</p>
+            <p class="">
+                Бонусы будут начислены в ближайшее время! Ждем вас в нашем новом
+                магазине на пр. Д. Яворницкого, 58 в Днепре
+            </p>
+            <p>
+                Поделитесь страничкой с друзьями, пускай они также получат порцию
+                яркого настроения!
+            </p>
+            <button type="button" class="">Назад</button>
+        </div> -->
     </div>
-
 </body>
+
 </html>
