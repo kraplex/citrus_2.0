@@ -24,6 +24,7 @@ html {
 
 .wrapper {
   max-width: 1366px;
+  width: 100%;
   margin: 0 auto;
   @include flex-column();
   background-image:
@@ -46,7 +47,8 @@ html {
     .features_links_wrapper {
       display: flex;
       justify-content: space-between;
-      width: 936px;
+      max-width: 936px;
+      width: 100%;
       .features_link {
         position: relative;
         @include flex-column();
