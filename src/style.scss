@@ -39,9 +39,6 @@ html {
         display: flex;
         flex-direction: column;
         align-items: center;
-        & img {
-          margin-bottom: 16px;
-        }
 
         .link {
           font-family: Roboto, sans-serif;
@@ -60,19 +57,138 @@ html {
   .features_block_top {
     padding-top: 35px;
     margin-bottom: 114px;
+    & img {
+      margin-bottom: 17px;
+    }
   }
 
   .features_block_bottom {
     padding-left: 26px;
-    & .features_link:first-child{
-        margin-right: 20px;
+    & .features_link:first-child {
+      margin-right: 25px;
     }
     .features_block_title {
       margin-bottom: 33px;
+      padding-right: 35px;
     }
     .logo {
       position: absolute;
-        top: 26%;
+      top: 25%;
+    }
+
+    .sky {
+      margin-bottom: 16px;
+    }
+  }
+
+  & main {
+    margin-bottom: 180px;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & label {
+      margin-bottom: 56px;
+    }
+
+    .form_text {
+      font-family: Roboto, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 62px;
+      line-height: 130%;
+      text-align: center;
+      color: rgba(0, 0, 0, 0.87);
+
+      .form_text_bonus {
+        color: #ff680a;
+        font-weight: 500;
+      }
+    }
+
+    & p:last-child {
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 132%;
+    }
+
+    .form_input {
+      border-radius: 50px;
+      max-width: 369px;
+      width: 100%;
+      background: #ffffff;
+      border: 1px solid #cfcfcf;
+      padding: 13px 0;
+      margin-bottom: 42px;
+      font-family: Roboto, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 28px;
+      text-align: center;
+      color: rgba(0, 0, 0, 0.54);
+    }
+
+    .form_button_send {
+      background: #ff680a;
+      border: none;
+      border-radius: 50px;
+      max-width: 369px;
+      width: 100%;
+      font-family: Roboto, sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 28px;
+      text-align: center;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.87);
+      padding: 14px 0;
+    }
+  }
+
+  .thanks {
+    padding-top: 16px;
+
+    & .form_text {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 25px;
+      line-height: 130%;
+      text-align: center;
+      color: rgba(0, 0, 0, 0.87);
+    }
+
+    & .form_text:first-child {
+      margin-bottom: 3px;
+    }
+
+    & .form_text:last-child {
+      margin-bottom: 25px;
+    }
+
+    & .form_text_bonus {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 50px;
+      line-height: 130%;
+      text-align: center;
+      color: #ff680a;
+    }
+
+    .share {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 130%;
+      text-align: center;
+      color: rgba(0, 0, 0, 0.87);
     }
   }
 }
