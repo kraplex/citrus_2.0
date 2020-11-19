@@ -1,3 +1,16 @@
+$corp-color: #ff680a;
+
+@mixin font() {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+@mixin flex-column() {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -12,18 +25,18 @@ html {
 .wrapper {
   max-width: 1366px;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include flex-column();
+  background-image:
+    url("./images/bottom_bg.png"),
+    url("./images/1bg.png");
+  background-position: bottom,  0 60%;
+  background-repeat: no-repeat;
+  padding-bottom: 95px;
 
   .features_block {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex-column();
     .features_block_title {
-      font-family: Roboto, sans-serif;
-      font-style: normal;
-      font-weight: normal;
+      @include font();
       font-size: 28px;
       line-height: 33px;
       color: rgba(0, 0, 0, 0.54);
@@ -36,19 +49,19 @@ html {
       width: 936px;
       .features_link {
         position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include flex-column();
 
         .link {
-          font-family: Roboto, sans-serif;
-          font-style: normal;
-          font-weight: normal;
+          @include font();
           font-size: 18px;
           line-height: 21px;
           text-align: center;
           color: #3b6d9a;
           text-decoration: none;
+        }
+
+        .link:hover {
+          color: $corp-color;
         }
       }
     }
@@ -63,21 +76,28 @@ html {
   }
 
   .features_block_bottom {
-    padding-left: 26px;
+    padding-left: 25px;
     & .features_link:first-child {
-      margin-right: 25px;
+      margin-right: 23px;
     }
     .features_block_title {
       margin-bottom: 33px;
-      padding-right: 35px;
+      padding-right: 34px;
     }
     .logo {
       position: absolute;
       top: 25%;
+      z-index: 2;
     }
 
     .sky {
       margin-bottom: 16px;
+      z-index: 1;
+    }
+
+    & .features_link:hover .sky {
+      transform: scale(1.2);
+      transition-duration: 1s;
     }
   }
 
@@ -86,25 +106,21 @@ html {
   }
 
   .footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex-column();
 
     & label {
       margin-bottom: 56px;
     }
 
-    .form_text {
-      font-family: Roboto, sans-serif;
-      font-style: normal;
-      font-weight: normal;
+    .footer_text {
+      @include font();
       font-size: 62px;
       line-height: 130%;
       text-align: center;
       color: rgba(0, 0, 0, 0.87);
 
-      .form_text_bonus {
-        color: #ff680a;
+      .footer_text_bonus {
+        color: $corp-color;
         font-weight: 500;
       }
     }
@@ -115,7 +131,7 @@ html {
       line-height: 132%;
     }
 
-    .form_input {
+    .footer_input {
       border-radius: 50px;
       max-width: 369px;
       width: 100%;
@@ -123,23 +139,24 @@ html {
       border: 1px solid #cfcfcf;
       padding: 13px 0;
       margin-bottom: 42px;
-      font-family: Roboto, sans-serif;
-      font-style: normal;
-      font-weight: normal;
+      @include font();
       font-size: 24px;
       line-height: 28px;
       text-align: center;
       color: rgba(0, 0, 0, 0.54);
     }
 
-    .form_button_send {
-      background: #ff680a;
+    .footer_input:hover {
+      border: 1px solid rgba(0, 0, 0, 0.54);
+    }
+
+    .footer_button_send {
+      background: $corp-color;
       border: none;
       border-radius: 50px;
       max-width: 369px;
       width: 100%;
-      font-family: Roboto, sans-serif;
-      font-style: normal;
+      @include font();
       font-weight: 500;
       font-size: 24px;
       line-height: 28px;
@@ -148,47 +165,64 @@ html {
       color: rgba(255, 255, 255, 0.87);
       padding: 14px 0;
     }
+
+    .footer_button_send:hover {
+      background: #FF8637;
+      cursor: pointer;
+    }
   }
 
-  .thanks {
+  .info {
     padding-top: 16px;
 
-    & .form_text {
-      font-family: Roboto;
-      font-style: normal;
-      font-weight: normal;
+    & .footer_text {
+      @include font();
       font-size: 25px;
       line-height: 130%;
       text-align: center;
       color: rgba(0, 0, 0, 0.87);
     }
 
-    & .form_text:first-child {
+    & .footer_text:first-child {
       margin-bottom: 3px;
     }
 
-    & .form_text:last-child {
+    & .footer_text:nth-child(2) {
       margin-bottom: 25px;
     }
 
-    & .form_text_bonus {
-      font-family: Roboto;
-      font-style: normal;
+    & .footer_text_bonus {
+      @include font();
       font-weight: 500;
       font-size: 50px;
       line-height: 130%;
       text-align: center;
-      color: #ff680a;
+      color: $corp-color;
     }
 
     .share {
-      font-family: Roboto;
-      font-style: normal;
-      font-weight: normal;
+      @include font();
       font-size: 18px;
       line-height: 130%;
       text-align: center;
       color: rgba(0, 0, 0, 0.87);
+      margin-bottom: 34px;
+    }
+
+    .footer_button_back {
+      background: $corp-color;
+      border: none;
+      border-radius: 50px;
+      max-width: 184px;
+      width: 100%;
+      @include font();
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 28px;
+      text-align: center;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.87);
+      padding: 14px 0;
     }
   }
 }
