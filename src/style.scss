@@ -27,31 +27,85 @@ html {
   width: 100%;
   margin: 0 auto;
   @include flex-column();
-  background-image:
-    url("./images/bottom_bg.png"),
-    url("./images/1bg.png");
-  background-position: bottom,  0 60%;
+  background-image: url("/src/images/bg_bottom_1366.png"),
+    url("/src/images/bg_top_1366.png");
+  background-position: 0 bottom, 0 60%;
   background-repeat: no-repeat;
   padding-bottom: 95px;
+  background-size: contain;
+
+  @media screen and (max-width: 1335px) {
+    background-image: url("/src/images/bg_bottom_1024.png"),
+      url("/src/images/bg_top_1024.png");
+    background-position: 0 bottom, 0 56%;
+  }
+  @media screen and (max-width: 1023px) {
+    background-image: url("/src/images/bg_bottom_768.png"),
+      url("/src/images/bg_top_768.png");
+    background-position: 0 bottom, 0 51%;
+    padding-bottom: 67px;
+  }
+  @media screen and (max-width: 767px) {
+    background-image: url("/src/images/bg_bottom_mobile.png"),
+      url("/src/images/bg_top_mobile.png");
+      background-position: 0 bottom, 0 47%;
+    padding-bottom: 88px;
+  }
+
+  .main_img {
+    max-width: 1366px;
+    width: 100%;    
+  }
+
+  & main {
+    margin-bottom: 180px;
+    max-width: 1366px;
+    width: 100%;
+    @media screen and (max-width: 1335px) {
+      margin-bottom: 155px;
+    }
+    @media screen and (max-width: 1023px) {
+      margin-bottom: 105px;
+    }
+  }
 
   .features_block {
     @include flex-column();
+
     .features_block_title {
       @include font();
       font-size: 28px;
       line-height: 33px;
       color: rgba(0, 0, 0, 0.54);
-      margin-bottom: 12px;
+      margin-bottom: 13px;
+      text-align: center;
+
+      @media screen and (max-width: 1023px) {
+        font-size: 20px;
+        line-height: 23px;
+      }
+
+      @media screen and (max-width: 767px) {
+        max-width: 270px;
+      }
     }
 
     .features_links_wrapper {
       display: flex;
-      justify-content: space-between;
-      max-width: 936px;
+      justify-content: space-evenly;
+      max-width: 1366px;
       width: 100%;
-      .features_link {
-        position: relative;
+      box-sizing: border-box;
+
+      @media screen and (max-width: 767px) {
+        flex-direction: column;
+      }
+
+      .features_container {
         @include flex-column();
+
+        background-repeat: no-repeat;
+        position: relative;
 
         .link {
           @include font();
@@ -60,6 +114,15 @@ html {
           text-align: center;
           color: #3b6d9a;
           text-decoration: none;
+
+          @media screen and (max-width: 1023px) {
+            font-size: 16px;
+            line-height: 19px;
+          }
+          @media screen and (max-width: 767px) {
+            font-size: 14px;
+            line-height: 16px;
+          }
         }
 
         .link:hover {
@@ -70,22 +133,33 @@ html {
   }
 
   .features_block_top {
-    padding-top: 35px;
-    margin-bottom: 114px;
-    & img {
-      margin-bottom: 17px;
+    padding-top: 34px;
+    margin-bottom: 113px;
+    @media screen and (max-width: 1024px) {
+      padding-top: 24px;
+      margin-bottom: 97px;
+    }
+    @media screen and (max-width: 768px) {
+      padding-top: 24px;
+      margin-bottom: 73px;
+    }
+    @media screen and (max-width: 320px) {
+      padding-top: 40px;
+      margin-bottom: 93px;
     }
   }
 
   .features_block_bottom {
-    padding-left: 25px;
-    & .features_link:first-child {
-      margin-right: 23px;
-    }
     .features_block_title {
       margin-bottom: 33px;
-      padding-right: 34px;
+      @media screen and (max-width: 768px) {
+        margin-bottom: 20px;
+      }
+      @media screen and (max-width: 320px) {
+        margin-bottom: 44px;
+      }
     }
+
     .logo {
       position: absolute;
       top: 25%;
@@ -96,22 +170,25 @@ html {
       margin-bottom: 16px;
       z-index: 1;
     }
-
-    & .features_link:hover .sky {
+    & .features_container:nth-child(2) {
+      margin: 20px 0;
+    }
+    & .features_container:hover .sky {
       transform: scale(1.2);
       transition-duration: 1s;
     }
   }
-
-  & main {
-    margin-bottom: 180px;
-  }
-
   .footer {
     @include flex-column();
 
     & label {
       margin-bottom: 56px;
+      @media screen and (max-width: 1024px) {
+        margin-bottom: 40px;
+      }
+      @media screen and (max-width: 768px) {
+        margin-bottom: 33px;
+      }
     }
 
     .footer_text {
@@ -120,6 +197,15 @@ html {
       line-height: 130%;
       text-align: center;
       color: rgba(0, 0, 0, 0.87);
+      @media screen and (max-width: 1024px) {
+        font-size: 44px;
+      }
+      @media screen and (max-width: 768px) {
+        font-size: 32px;
+      }
+      @media screen and (max-width: 320px) {
+        font-size: 24px;
+      }
 
       .footer_text_bonus {
         color: $corp-color;
@@ -131,6 +217,15 @@ html {
       font-size: 32px;
       font-weight: 500;
       line-height: 132%;
+      @media screen and (max-width: 1024px) {
+        font-size: 22px;
+      }
+      @media screen and (max-width: 768px) {
+        font-size: 16px;
+      }
+      @media screen and (max-width: 320px) {
+        font-size: 14px;
+      }
     }
 
     .footer_input {
@@ -146,6 +241,18 @@ html {
       line-height: 28px;
       text-align: center;
       color: rgba(0, 0, 0, 0.54);
+      @media screen and (max-width: 1024px) {
+        font-size: 24px;
+        margin-bottom: 32px;
+      }
+      @media screen and (max-width: 768px) {
+        font-size: 18px;
+        max-width: 256px;
+        margin-bottom: 24px;
+      }
+      @media screen and (max-width: 320px) {
+        font-size: 16px;
+      }
     }
 
     .footer_input:hover {
@@ -166,10 +273,20 @@ html {
       text-transform: uppercase;
       color: rgba(255, 255, 255, 0.87);
       padding: 14px 0;
+      @media screen and (max-width: 1024px) {
+        font-size: 24px;
+      }
+      @media screen and (max-width: 768px) {
+        font-size: 18px;
+        max-width: 256px;
+      }
+      @media screen and (max-width: 320px) {
+        font-size: 16px;
+      }
     }
 
     .footer_button_send:hover {
-      background: #FF8637;
+      background: #ff8637;
       cursor: pointer;
     }
   }
@@ -183,14 +300,6 @@ html {
       line-height: 130%;
       text-align: center;
       color: rgba(0, 0, 0, 0.87);
-    }
-
-    & .footer_text:first-child {
-      margin-bottom: 3px;
-    }
-
-    & .footer_text:nth-child(2) {
-      margin-bottom: 25px;
     }
 
     & .footer_text_bonus {

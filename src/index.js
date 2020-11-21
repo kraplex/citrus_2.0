@@ -1,24 +1,20 @@
 import "./style.scss";
-import bg from "./images/1bg.png";
-import bg320 from "./images/bg-320.png";
-import bottom_bg from "./images/bottom_bg.png";
-import im_event from "./images/im_event.png";
-import im_gift from "./images/im_gift.png";
-import im_sale from "./images/im_sale.png";
-import logo_academy_new from "./images/logo_academy_new.png";
-import logo_cehab_new from "./images/logo_cehab_new.png";
-import main_img from "./images/main_img.jpg";
-import sky from "./images/sky.png";
-import yt from "./images/yt.png";
+
+import im_event from "./images/event_1366.png";
+import im_gift from "./images/gift_1366.png";
+import im_sale from "./images/sale_1366.png";
+import logo_academy_new from "./images/academy_1366.png";
+import logo_cehab_new from "./images/cehab_1366.png";
+import sky from "./images/sky_1366.png";
+import yt from "./images/yt_1366.png";
 
 const url = "https://postman-echo.com/post";
-const input = document.querySelector(".form input");
-const buttonSend = document.querySelector(".form button");
+const input = document.querySelector("#form input");
+const buttonSend = document.querySelector("#form button");
 
-const form = document.querySelector(".form");
-const divForm = document.querySelector(".form");
-const divThanks = document.querySelector(".thanks");
-const buttonBack = document.querySelector(".back");
+const form = document.querySelector("#form");
+const divInfo = document.querySelector("#info");
+const buttonBack = document.querySelector(".footer_button_back");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -51,16 +47,16 @@ async function eventHandler() {
       }),
     });
     input.value = "";
-    divForm.style.display = "none";
-    divThanks.style.display = "block";
+    form.style.display = "none";
+    divInfo.style.display = "flex";
   } catch {
     console.error("Something went wrong");
   }
 }
 
 buttonBack.addEventListener("click", () => {
-  divThanks.style.display = "none";
-  divForm.style.display = "flex";
-  divForm.scrollIntoView({ block: "center", behavior: "smooth" });
+  divInfo.style.display = "none";
+  form.style.display = "flex";
+  //divForm.scrollIntoView({ block: "center", behavior: "smooth" });
 });
 
