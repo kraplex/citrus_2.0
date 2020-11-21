@@ -1,5 +1,5 @@
 import "./style.scss";
-
+import main_img from "./images/main_img_1366.jpg";
 import im_event from "./images/event_1366.png";
 import im_gift from "./images/gift_1366.png";
 import im_sale from "./images/sale_1366.png";
@@ -57,6 +57,5 @@ async function eventHandler() {
 buttonBack.addEventListener("click", () => {
   divInfo.style.display = "none";
   form.style.display = "flex";
-  //divForm.scrollIntoView({ block: "center", behavior: "smooth" });
 });
 

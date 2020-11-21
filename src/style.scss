@@ -48,13 +48,13 @@ html {
   @media screen and (max-width: 767px) {
     background-image: url("/src/images/bg_bottom_mobile.png"),
       url("/src/images/bg_top_mobile.png");
-      background-position: 0 bottom, 0 47%;
+    background-position: 0 bottom, 0 47%;
     padding-bottom: 88px;
   }
 
   .main_img {
     max-width: 1366px;
-    width: 100%;    
+    width: 100%;
   }
 
   & main {
@@ -95,16 +95,24 @@ html {
       justify-content: space-evenly;
       max-width: 1366px;
       width: 100%;
-      box-sizing: border-box;
-
+      box-sizing: border-box; 
+      
+      @media screen and (max-width: 1365px) {
+      
+      }
+      @media screen and (max-width: 1023px) {
+        
+      }
       @media screen and (max-width: 767px) {
+        width: auto;
         flex-direction: column;
       }
+    
 
       .features_container {
         @include flex-column();
-
-        background-repeat: no-repeat;
+        max-width: 230px;
+        width: 100%;
         position: relative;
 
         .link {
@@ -170,9 +178,13 @@ html {
       margin-bottom: 16px;
       z-index: 1;
     }
+
     & .features_container:nth-child(2) {
-      margin: 20px 0;
+      @media screen and (max-width: 320px) {
+        margin: 20px 0;
+      }
     }
+
     & .features_container:hover .sky {
       transform: scale(1.2);
       transition-duration: 1s;
@@ -292,32 +304,60 @@ html {
   }
 
   .info {
+    @include flex-column();
     padding-top: 16px;
 
-    & .footer_text {
+    & .info_text:first-child {
+      @include font();
+      font-size: 50px;
+      font-weight: 500;
+      line-height: 130%;
+      text-align: center;
+      color: $corp-color;
+      @media screen and (max-width: 1024px) {
+        font-size: 32px;
+      }
+      @media screen and (max-width: 768px) {
+        font-size: 22px;
+      }
+      @media screen and (max-width: 320px) {
+        font-size: 16px;
+      }
+    }
+
+    & .info_text:nth-child(2) {
       @include font();
       font-size: 25px;
       line-height: 130%;
       text-align: center;
       color: rgba(0, 0, 0, 0.87);
+      margin-bottom: 24px;
+      @media screen and (max-width: 1024px) {
+        font-size: 18px;
+      }
+      @media screen and (max-width: 768px) {
+        font-size: 14px;
+      }
+      @media screen and (max-width: 320px) {
+        font-size: 12px;
+      }
     }
-
-    & .footer_text_bonus {
-      @include font();
-      font-weight: 500;
-      font-size: 50px;
-      line-height: 130%;
-      text-align: center;
-      color: $corp-color;
-    }
-
-    .share {
+    & .info_text:nth-child(3) {
       @include font();
       font-size: 18px;
       line-height: 130%;
       text-align: center;
       color: rgba(0, 0, 0, 0.87);
-      margin-bottom: 34px;
+      margin-bottom: 35px;
+      @media screen and (max-width: 1024px) {
+        font-size: 16px;
+      }
+      @media screen and (max-width: 768px) {
+        font-size: 14px;
+      }
+      @media screen and (max-width: 320px) {
+        font-size: 12px;
+      }
     }
 
     .footer_button_back {
@@ -334,6 +374,21 @@ html {
       text-transform: uppercase;
       color: rgba(255, 255, 255, 0.87);
       padding: 14px 0;
+      @media screen and (max-width: 1024px) {
+        font-size: 18px;
+        max-width: 130px;
+        padding: 12px 0;
+      }
+      @media screen and (max-width: 768px) {
+        font-size: 14px;
+        max-width: 120px;
+        padding: 10px 0;
+      }
+      @media screen and (max-width: 320px) {
+        font-size: 12px;
+        max-width: 110px;
+        padding: 8px 0;
+      }
     }
   }
 }
