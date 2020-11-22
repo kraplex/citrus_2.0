@@ -22,16 +22,16 @@ form.addEventListener("submit", (event) => {
 
 form.addEventListener("keydown", (event) => {
   if (event.keyCode === 13) {
-    if (input.value.length === 2 && Number.isNaN(+input.value) === false) {
+    if (input.value.length === 13 && Number.isNaN(+input.value) === false) {
       eventHandler();
-    } else alert("invalid phone format");
+    } else alert("Invalid phone format, correct format +38 (0__) ___ - __ - __");
   }
 });
 
 buttonSend.addEventListener("click", () => {
-  if (input.value.length === 2 && Number.isNaN(+input.value) === false) {
+  if (input.value.length === 13 && Number.isNaN(+input.value) === false) {
     eventHandler();
-  } else alert("invalid phone format");
+  } else alert("Invalid phone format, correct format +38 (0__) ___ - __ - __");
 });
 
 async function eventHandler() {
