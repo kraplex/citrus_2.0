@@ -7,8 +7,8 @@ import logo_academy_new from "./images/academy_1366.png";
 import logo_cehab_new from "./images/cehab_1366.png";
 import sky from "./images/sky_1366.png";
 import yt from "./images/yt_1366.png";
-import bg_top from "./images/bg_top_1366.png";
-import bg_bottom from "./images/bg_bottom_1366.png";
+/* import bg_top from "./images/bg_top_1366.png";
+import bg_bottom from "./images/bg_bottom_1366.png"; */
 
 
 const url = "https://postman-echo.com/post";
