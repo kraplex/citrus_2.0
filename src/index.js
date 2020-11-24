@@ -7,9 +7,6 @@ import logo_academy_new from "./images/academy_1366.png";
 import logo_cehab_new from "./images/cehab_1366.png";
 import sky from "./images/sky_1366.png";
 import yt from "./images/yt_1366.png";
-/* import bg_top from "./images/bg_top_1366.png";
-import bg_bottom from "./images/bg_bottom_1366.png"; */
-
 
 const url = "https://postman-echo.com/post";
 const input = document.querySelector("#form input");
@@ -27,7 +24,8 @@ form.addEventListener("keydown", (event) => {
   if (event.keyCode === 13) {
     if (input.value.length === 13 && Number.isNaN(+input.value) === false) {
       eventHandler();
-    } else alert("Invalid phone format, correct format +38 (0__) ___ - __ - __");
+    } else
+      alert("Invalid phone format, correct format +38 (0__) ___ - __ - __");
   }
 });
 
@@ -61,4 +59,3 @@ buttonBack.addEventListener("click", () => {
   divInfo.style.display = "none";
   form.style.display = "flex";
 });
-

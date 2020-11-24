@@ -95,14 +95,12 @@ html {
       justify-content: space-evenly;
       max-width: 1366px;
       width: 100%;
-      box-sizing: border-box; 
-      
-     
+      box-sizing: border-box;
+
       @media screen and (max-width: 767px) {
         width: auto;
         flex-direction: column;
       }
-    
 
       .features_container {
         @include flex-column();
@@ -155,7 +153,7 @@ html {
       max-width: 173px;
       @media screen and (max-width: 1365px) {
         max-width: 146px;
-      }         
+      }
     }
   }
 
@@ -177,7 +175,7 @@ html {
       max-width: 179px;
       @media screen and (max-width: 1365px) {
         max-width: 150px;
-      }  
+      }
     }
 
     .sky {
@@ -186,7 +184,7 @@ html {
       max-width: 144px;
       @media screen and (max-width: 1365px) {
         max-width: 122px;
-      }   
+      }
     }
 
     & .features_container:nth-child(2) {
